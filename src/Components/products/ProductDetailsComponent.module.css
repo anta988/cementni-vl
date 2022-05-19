@@ -1,0 +1,22 @@
+.imagesWrapper {
+    display: grid;
+    grid-template-columns: 50% 50%;
+    grid-gap: 1rem;
+}
+
+.detailWrapper, .calculator{
+    flex-direction: column;
+}
+
+.calculator>label, .calculator>input{
+    font-size: 1.2rem;
+}
+
+.calculator>label, .calculator>div{
+    padding: 1rem;
+}
+
+.calculated{
+    font-size: 2rem;
+    color: blue;
+}

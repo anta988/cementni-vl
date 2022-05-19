@@ -1,6 +1,7 @@
+import ProductsComponent from "../Components/products/ProductsComponent";
 const Products = () => {
     return (
-        <h1>This is products page!</h1>
+        <ProductsComponent />
     );
 };
 

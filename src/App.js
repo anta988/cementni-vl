@@ -1,5 +1,6 @@
 import { Route, Routes } from 'react-router-dom';
 import './App.css';
+import ProductDetails from './Pages/ProductDetails';
 import Layout from './Header/Layout';
 import AboutUs from './Pages/AboutUs';
 import Contact from './Pages/Contact';
@@ -14,6 +15,7 @@ function App() {
         <Route path='' element={<Default />} />
         <Route path='/about-us' element={<AboutUs />} />
         <Route path='/products' element={<Products />} />
+        <Route path='/products/:productId' element={<ProductDetails />} />
         <Route path='/contact' element={<Contact />} />
         <Route path='*' element={<NotFound />} />
       </Routes>
