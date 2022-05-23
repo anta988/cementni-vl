@@ -7,6 +7,7 @@ import Contact from './Pages/Contact';
 import Default from './Pages/Default';
 import NotFound from './Pages/NotFound';
 import Products from './Pages/Products';
+import Certificates from './Pages/Certificates';
 
 function App() {
   return (
@@ -17,6 +18,7 @@ function App() {
         <Route path='/products' element={<Products />} />
         <Route path='/products/:productId' element={<ProductDetails />} />
         <Route path='/contact' element={<Contact />} />
+        <Route path='/certificates' element={<Certificates />} />
         <Route path='*' element={<NotFound />} />
       </Routes>
     </Layout>

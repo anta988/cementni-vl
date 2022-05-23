@@ -1,5 +1,5 @@
 import { Fragment } from "react";
-import Certificates from "../Components/Certificates";
+import Footer from "../Components/Footer/Footer";
 import classes from './Layout.module.css'
 import MainNavigation from "./MainNavigation";
 
@@ -10,7 +10,7 @@ const Layout = (props) => {
             <main className={classes.main}>
                 {props.children}
             </main>
-            <Certificates />
+            <Footer />
         </Fragment>
     )
 }

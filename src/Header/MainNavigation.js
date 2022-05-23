@@ -1,9 +1,8 @@
 import classes from './MainNavigation.module.css'
-import { NavLink, useNavigate, useLocation } from 'react-router-dom';
+import { NavLink, useNavigate, } from 'react-router-dom';
 import logoImage from '../assets/logoBGR.png';
 
 const MainNavigation = () => {
-    const location = useLocation();
     const navigate = useNavigate();
 
     const logoClickHandler = () => {
@@ -20,7 +19,10 @@ const MainNavigation = () => {
                         <NavLink className={(navData) => navData.isActive ? classes.active : ''} to='/about-us'>O nama</NavLink>
                     </li>
                     <li>
-                        <NavLink className={(navData) => navData.isActive ? classes.active : ''} to='/products'>Proizvodi</NavLink>
+                        <NavLink className={(navData) => navData.isActive ? classes.active : ''} to='/products'>Svi proizvodi</NavLink>
+                    </li>
+                    <li>
+                        <NavLink className={(navData) => navData.isActive ? classes.active : ''} to='/certificates'>Sertifikati</NavLink>
                     </li>
                     <li>
                         <NavLink className={(navData) => navData.isActive ? classes.active : ''} to='/contact'>Kontakt</NavLink>

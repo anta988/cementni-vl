@@ -18,7 +18,7 @@ const ContactDetails = () => {
                 <div><strong>Industrijska zona b.b.</strong></div>
             </div>
             <div className={classes.detail}>
-                <label>Telefon / Fax</label>
+                <label>Telefon / Fax:</label>
                 <div>
                     <strong>+381(0)16/875-484</strong>
                     <br />
@@ -26,6 +26,10 @@ const ContactDetails = () => {
                     <br />
                     <strong>+381(0)16/875-928</strong>
                 </div>
+            </div>
+            <div className={classes.detail}>
+                <label>E-Mail:</label>
+                <div><strong>cementni@ptt.rs</strong></div>
             </div>
         </Fragment>
     )

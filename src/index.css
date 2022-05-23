@@ -1,15 +1,19 @@
+@font-face {
+  font-family: 'play';
+  src: url('fonts/Play-Regular.ttf') format('truetype');
+}
 * {
   box-sizing: border-box;
 }
 
 body {
-  font-family: sans-serif;
+  font-family: 'play';
   margin: 0;
   background-color: #e7f8f8;
 }
 
 .centered {
-  margin: 3rem auto;
+  margin: 1rem auto;
   text-align: center;
   display: flex;
   justify-content: center;

@@ -53,13 +53,13 @@ const DUMMY_DATA = [
 
     }
 ]
-const Products = () => {
 
+const Products = () => {
     return (
         <div className={classes.products}>
             {
                 DUMMY_DATA.map((product) => (
-                    <Card>
+                    <Card key={product.name}>
                         <div className={`centered ${classes.card}`}>
                             <img src={product.img[0]} alt='No img found!' />
                             <h2>{product.name}</h2>
