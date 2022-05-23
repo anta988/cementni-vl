@@ -1,6 +1,8 @@
 import { Fragment } from "react";
 import Card from "../../UI/Card";
-import classes from './Certificates.module.css'
+import classes from './Certificates.module.css';
+import { useDispatch } from "react-redux";
+import { imgAction } from "../../store/img-slice";
 
 const DUMMY_DATA = [
     {
@@ -136,13 +138,21 @@ const DUMMY_DATA = [
 ]
 
 const Certificates = () => {
+
+    const dispatch = useDispatch();
+    const imageClickHandler = (imageUrl) => {
+        dispatch(imgAction.showImage({
+            img: imageUrl
+        }))
+    }
+
     return (
         <Fragment>
             {DUMMY_DATA.map((element) => (
                 <Card key={element.name}>
                     <div className={`centered ${classes.certificationCard}`}>
                         <h2>{element.name}</h2>
-                        <img src={element.img} alt='Not found!' />
+                        <img src={element.img} alt='Not found!' onClick={() => imageClickHandler(element.img)} />
                         <p dangerouslySetInnerHTML={{ __html: element.description }} ></p>
                         <div className={`${classes.grid}`}>
                             <p dangerouslySetInnerHTML={{ __html: element.certificatedBy }}></p>

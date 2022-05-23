@@ -1,9 +1,14 @@
 import { Fragment } from "react";
 import Footer from "../Components/Footer/Footer";
+import ImageComponent from "../Components/ImageComponent/ImageComponent";
 import classes from './Layout.module.css'
 import MainNavigation from "./MainNavigation";
+import { useSelector } from 'react-redux'
 
 const Layout = (props) => {
+
+    const isImgVisible = useSelector((state) => state.img.imgIsVisible)
+
     return (
         <Fragment>
             <MainNavigation />
@@ -11,6 +16,7 @@ const Layout = (props) => {
                 {props.children}
             </main>
             <Footer />
+            {isImgVisible && <ImageComponent />}
         </Fragment>
     )
 }

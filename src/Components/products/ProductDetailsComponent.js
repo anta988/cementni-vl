@@ -1,7 +1,9 @@
 import { Fragment, useRef, useState } from "react";
 import { useParams } from "react-router-dom";
 import Card from "../../UI/Card";
-import classes from './ProductDetailsComponent.module.css'
+import classes from './ProductDetailsComponent.module.css';
+import { useDispatch } from "react-redux";
+import { imgAction } from "../../store/img-slice";
 const DUMMY_DATA = [
     {
         img: [require('../../assets/dekorit.jpg')],
@@ -54,8 +56,8 @@ const DUMMY_DATA = [
     }
 ]
 const ProductDetails = () => {
-
-    const params = useParams()
+    const dispatch = useDispatch();
+    const params = useParams();
 
     const { productId } = params;
 
@@ -72,7 +74,13 @@ const ProductDetails = () => {
         let value = neededInputRef.current.value
         setNeededConsumationValue(value);
     }
-    console.log(neededConsumationValue)
+
+    const imageClickHandler = (imageUrl) => {
+        dispatch(imgAction.showImage({
+            img: imageUrl
+        }))
+    }
+
     return (
         <Fragment>
             <Card>
@@ -80,7 +88,7 @@ const ProductDetails = () => {
                     <h2>{product.name.toUpperCase()}</h2>
                     <div className={classes.imagesWrapper}>
                         {product.img.map((image) => (
-                            <img src={image} alt='Not found!' />
+                            <img src={image} alt='Not found!' onClick={() => imageClickHandler(image)} />
                         ))}
                     </div>
                     <p>{product.description}</p>
