@@ -2,10 +2,6 @@
     flex-direction: column;
 }
 
-.certificationCard img{
-    width: 10rem;
-}
-
 .certificationCard p{
     text-align: center;
 }
@@ -14,4 +10,10 @@
     display: grid;
     grid-template-columns: 50% 50%;
     grid-gap: 1rem;
+}
+
+
+.certificationCard>.img {
+    width: 10rem;
+    cursor: zoom-in;
 }

@@ -152,7 +152,7 @@ const Certificates = () => {
                 <Card key={element.name}>
                     <div className={`centered ${classes.certificationCard}`}>
                         <h2>{element.name}</h2>
-                        <img src={element.img} alt='Not found!' onClick={() => imageClickHandler(element.img)} />
+                        <img className={classes.img} src={element.img} alt='Not found!' onClick={() => imageClickHandler(element.img)} />
                         <p dangerouslySetInnerHTML={{ __html: element.description }} ></p>
                         <div className={`${classes.grid}`}>
                             <p dangerouslySetInnerHTML={{ __html: element.certificatedBy }}></p>

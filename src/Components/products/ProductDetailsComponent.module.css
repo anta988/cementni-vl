@@ -20,3 +20,7 @@
     font-size: 2rem;
     color: blue;
 }
+
+.imagesWrapper>.img {
+    cursor: zoom-in;
+}

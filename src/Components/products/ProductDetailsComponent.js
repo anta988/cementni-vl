@@ -88,7 +88,7 @@ const ProductDetails = () => {
                     <h2>{product.name.toUpperCase()}</h2>
                     <div className={classes.imagesWrapper}>
                         {product.img.map((image) => (
-                            <img src={image} alt='Not found!' onClick={() => imageClickHandler(image)} />
+                            <img className={classes.img} src={image} alt='Not found!' onClick={() => imageClickHandler(image)} />
                         ))}
                     </div>
                     <p>{product.description}</p>
