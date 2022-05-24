@@ -8,12 +8,11 @@ const imgSlice = createSlice({
     },
     reducers: {
         showImage(state, action) {
-            console.log(action);
             state.imgIsVisible = true;
             state.imgURL = action.payload.img
         },
         hideImage(state) {
-            state.imgIsVisible = !state.imgIsVisible;
+            state.imgIsVisible = false;
         }
     }
 });
