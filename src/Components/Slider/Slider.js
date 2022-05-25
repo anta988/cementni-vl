@@ -1,10 +1,10 @@
 import { Fragment, useState } from 'react'
-import cp0 from '../assets/cp0.jpeg'
-import cp1 from '../assets/cp1.jpeg'
-import cp2 from '../assets/cp2.jpeg'
-import cp3 from '../assets/cp3.jpg'
-import cp4 from '../assets/cp4.jpeg'
-import cp5 from '../assets/cp5.jpeg'
+import cp0 from '../../assets/cp0.jpeg'
+import cp1 from '../../assets/cp1.jpeg'
+import cp2 from '../../assets/cp2.jpeg'
+import cp3 from '../../assets/cp3.jpg'
+import cp4 from '../../assets/cp4.jpeg'
+import cp5 from '../../assets/cp5.jpeg'
 import classes from './Slider.module.css'
 
 const imagesArray = [cp0, cp1, cp2, cp3, cp4, cp5];
