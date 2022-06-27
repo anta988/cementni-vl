@@ -1,6 +1,6 @@
 import classes from './MainNavigation.module.css'
 import { NavLink, useNavigate, } from 'react-router-dom';
-import logoImage from '../assets/logoBGR.png';
+import logoImage from '../../assets/logoBGR.png';
 
 const MainNavigation = () => {
     const navigate = useNavigate();

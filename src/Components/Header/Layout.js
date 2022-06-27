@@ -1,9 +1,9 @@
 import { Fragment } from "react";
-import Footer from "../Components/Footer/Footer";
-import ImageComponent from "../Components/ImageComponent/ImageComponent";
+import Footer from '../Footer/Footer';
+import ImageComponent from "../ImageComponent/ImageComponent";
 import classes from './Layout.module.css'
 import MainNavigation from "./MainNavigation";
-import { useSelector } from 'react-redux'
+import { useSelector } from 'react-redux';
 
 const Layout = (props) => {
 
